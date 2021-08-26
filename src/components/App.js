@@ -1,4 +1,5 @@
 import Dishes from "./Dishes";
+import Checkout from "./Checkout";
 export default function App() {
   return (
     <body>
@@ -19,6 +20,7 @@ export default function App() {
       <div class="finalizar">
         <div class="botao">Selecione os 3 itens para fechar o pedido</div>
       </div>
+      <Checkout />
     </body>
   );
 }

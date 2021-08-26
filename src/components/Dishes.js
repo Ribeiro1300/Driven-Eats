@@ -1,3 +1,4 @@
+import React from "react";
 import { Deserts, Drinks, MainDishes } from "./Data";
 
 export default function Dishes(props) {
@@ -6,6 +7,7 @@ export default function Dishes(props) {
   if (props.dish == "MainDishes") dish = MainDishes;
   if (props.dish == "Drinks") dish = Drinks;
 
+  const [count, setCount] = React.useState(1);
   return (
     <div class="pratos">
       {dish.map((info) => (
@@ -18,7 +20,17 @@ export default function Dishes(props) {
               R$
               <h3>{info.price.toFixed(2)}</h3>
             </div>
-            <ion-icon class="check" name="checkmark-circle"></ion-icon>
+            <div className="counter hidden">
+              <ion-icon
+                name="remove-outline"
+                onClick={() => setCount(count - 1)}
+              ></ion-icon>
+              <p>{count}</p>
+              <ion-icon
+                name="add-outline"
+                onClick={() => setCount(count + 1)}
+              ></ion-icon>
+            </div>
           </div>
         </div>
       ))}
