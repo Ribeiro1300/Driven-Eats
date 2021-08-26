@@ -3,13 +3,13 @@ import Checkout from "./Checkout";
 export default function App() {
   return (
     <body>
-      <div class="topo">
-        <div class="titulo">
+      <div className="topo">
+        <div className="titulo">
           <h1>DrivenEats</h1>
           <p>Sua comida em 6 minutos</p>
         </div>
       </div>
-      <div class="principal">
+      <div className="principal">
         <h2>Primeiro, seu prato</h2>
         <Dishes dish="MainDishes" />
         <h2>Agora, sua bebida</h2>
@@ -17,8 +17,8 @@ export default function App() {
         <h2>Por fim, sua sobremesa</h2>
         <Dishes dish="Deserts" />
       </div>
-      <div class="finalizar">
-        <div class="botao">Selecione os 3 itens para fechar o pedido</div>
+      <div className="finalizar">
+        <div className="botao">Selecione os 3 itens para fechar o pedido</div>
       </div>
       <Checkout />
     </body>

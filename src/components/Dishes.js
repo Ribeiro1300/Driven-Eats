@@ -1,5 +1,5 @@
 import React from "react";
-import { Deserts, Drinks, MainDishes } from "./Data";
+import { Deserts, Drinks, MainDishes, Items } from "./Data";
 
 export default function Dishes(props) {
   let dish;
@@ -8,27 +8,46 @@ export default function Dishes(props) {
   if (props.dish == "Drinks") dish = Drinks;
 
   const [count, setCount] = React.useState(1);
+  const [state, setState] = React.useState("");
+  if (count == 0) setState(" ");
+
+  function addToCart(name, price) {
+    Items.push({ name: name, price: price });
+  }
+  function removeFromCart(name, price) {
+    const obj = { name: name, price: price };
+    Items.pop(obj);
+  }
   return (
-    <div class="pratos">
+    <div className="pratos">
       {dish.map((info) => (
-        <div class={props.dish + " opcao"}>
+        <div
+          className={props.dish + " opcao " + state}
+          onClick={() => setState("selecionado")}
+        >
           <img src={info.img} alt="" />
           <h3>{info.name}</h3>
           <p>{info.description}</p>
-          <div class="preco">
+          <div className="preco">
             <div>
               R$
               <h3>{info.price.toFixed(2)}</h3>
             </div>
-            <div className="counter hidden">
+            <div className={"counter " + state}>
               <ion-icon
                 name="remove-outline"
-                onClick={() => setCount(count - 1)}
+                onClick={() => {
+                  setCount(count - 1);
+                  removeFromCart(info.name, info.price);
+                }}
               ></ion-icon>
               <p>{count}</p>
               <ion-icon
                 name="add-outline"
-                onClick={() => setCount(count + 1)}
+                onClick={() => {
+                  setCount(count + 1);
+                  addToCart(info.name, info.price);
+                }}
               ></ion-icon>
             </div>
           </div>

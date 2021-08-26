@@ -118,10 +118,11 @@ a {
   --ionicon-stroke-width: 16px;
 }
 .preco .counter {
-  opacity: 0;
+  display: none;
 }
-.preco .counter.selecionado {
-  opacity: 1;
+.counter.selecionado {
+  display: flex;
+  border: none;
 }
 
 /* -----------------------------CONFIGURAÇÕES FINALIZAR----------------------- */
