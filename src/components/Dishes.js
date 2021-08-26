@@ -10,7 +10,10 @@ function SingleDish(info, props) {
   function removeFromCart(name, price) {
     const obj = { name: name, price: price };
     Items.pop(obj);
-    if (count == 1) setState("");
+    if (count == 1) {
+      setState("");
+      setCount(1);
+    }
   }
 
   return (
