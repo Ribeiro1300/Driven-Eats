@@ -2,27 +2,27 @@ export default function Checkout() {
   return (
     <div className="checkout hidden">
       <h2>Revise seu pedido</h2>
-      <div class="confirmacaoTitulo">Confirme seu pedido!</div>
-      <div class="confirmacaoPrato final">
-        <div class="pratoUm"></div>
-        <div class="preco1"></div>
+      <div className="confirmacaoTitulo">Confirme seu pedido!</div>
+      <div className="confirmacaoPrato final">
+        <div className="pratoUm"></div>
+        <div className="preco1"></div>
       </div>
-      <div class="confirmacaoBebida final">
-        <div class="pratoDois"></div>
-        <div class="preco2"></div>
+      <div className="confirmacaoBebida final">
+        <div className="pratoDois"></div>
+        <div className="preco2"></div>
       </div>
-      <div class="confirmacaoSobremesa final">
-        <div class="pratoTres"></div>
-        <div class="preco3"></div>
+      <div className="confirmacaoSobremesa final">
+        <div className="pratoTres"></div>
+        <div className="preco3"></div>
       </div>
-      <div class="final">
-        <div class="total">Total</div>
-        <div class="totalPreco"></div>
+      <div className="final">
+        <div className="total">Total</div>
+        <div className="totalPreco"></div>
       </div>
-      <div class="botao2" onclick="finalizar()">
+      <div className="botao2" onClick="finalizar()">
         Tudo certo, pode pedir!
       </div>
-      <div class="cancel" onclick="cancel()">
+      <div className="cancel" onClick="cancel()">
         Cancelar
       </div>
     </div>
