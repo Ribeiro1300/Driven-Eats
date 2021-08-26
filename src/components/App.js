@@ -2,7 +2,7 @@ import Dishes from "./Dishes";
 import Checkout from "./Checkout";
 export default function App() {
   return (
-    <body>
+    <>
       <div className="topo">
         <div className="titulo">
           <h1>DrivenEats</h1>
@@ -17,10 +17,7 @@ export default function App() {
         <h2>Por fim, sua sobremesa</h2>
         <Dishes dish="Deserts" />
       </div>
-      <div className="finalizar">
-        <div className="botao">Selecione os 3 itens para fechar o pedido</div>
-      </div>
-      <Checkout />
-    </body>
+      <Finish />
+    </>
   );
 }
