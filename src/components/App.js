@@ -1,5 +1,5 @@
-import Dishes from "./Dishes";
-import Checkout from "./Checkout";
+import { Dishes } from "./Dishes";
+import Finish from "./Finish";
 export default function App() {
   return (
     <>

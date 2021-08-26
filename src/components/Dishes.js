@@ -1,20 +1,21 @@
 import React from "react";
 import { Deserts, Drinks, MainDishes, Items } from "./Data";
 
-function addToCart(name, price) {
-  Items.push({ name: name, price: price });
-}
-function removeFromCart(name, price) {
-  const obj = { name: name, price: price };
-  Items.pop(obj);
-}
-function SingleDish(info, props, plate) {
+function SingleDish(info, props) {
   const [count, setCount] = React.useState(1);
   const [state, setState] = React.useState("");
   if (count == 0) setState(" ");
+  function addToCart(name, price) {
+    Items.push({ name: name, price: price });
+  }
+  function removeFromCart(name, price) {
+    const obj = { name: name, price: price };
+    Items.pop(obj);
+  }
+
   return (
     <div
-      className={plate + " opcao " + state}
+      className={props.dish + " opcao " + state}
       onClick={() => setState("selecionado")}
     >
       <img src={info.img} alt="" />
@@ -46,15 +47,14 @@ function SingleDish(info, props, plate) {
     </div>
   );
 }
-export default function Dishes(props) {
+function Dishes(props) {
   let dish;
   if (props.dish == "Deserts") dish = Deserts;
   if (props.dish == "MainDishes") dish = MainDishes;
   if (props.dish == "Drinks") dish = Drinks;
 
   return (
-    <div className="pratos">
-      {dish.map((info) => SingleDish(info, props, props.dish))}
-    </div>
+    <div className="pratos">{dish.map((info) => SingleDish(info, props))}</div>
   );
 }
+export { Dishes };
