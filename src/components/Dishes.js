@@ -3,9 +3,9 @@ import { Deserts, Drinks, MainDishes } from "./Data";
 
 export default function Dishes(props) {
   let dish;
-  if (props.dish == "Deserts") dish = Deserts;
-  if (props.dish == "MainDishes") dish = MainDishes;
-  if (props.dish == "Drinks") dish = Drinks;
+  if (props.dish === "Deserts") dish = Deserts;
+  if (props.dish === "MainDishes") dish = MainDishes;
+  if (props.dish === "Drinks") dish = Drinks;
 
   const [count, setCount] = React.useState(1);
   return (
