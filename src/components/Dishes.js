@@ -6,6 +6,7 @@ function SingleDish(info, props) {
   const [state, setState] = React.useState("");
   function addToCart(name, price) {
     Items.push({ name: name, price: price });
+    props.qtd(true);
   }
   function removeFromCart(name, price) {
     const obj = { name: name, price: price };
@@ -13,6 +14,7 @@ function SingleDish(info, props) {
     if (count == 1) {
       setState("");
       setCount(1);
+      props.qtd(false);
     }
   }
 
@@ -20,7 +22,10 @@ function SingleDish(info, props) {
     <div
       className={props.dish + " opcao " + state}
       onClick={() => {
-        if (state == "") setState("selecionado");
+        if (state == "") {
+          setState("selecionado");
+          addToCart(info.name, info.price);
+        }
       }}
     >
       <img src={info.img} alt="" />
