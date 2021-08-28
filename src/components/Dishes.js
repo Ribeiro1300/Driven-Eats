@@ -6,15 +6,15 @@ function SingleDish(info, props) {
   const [state, setState] = React.useState("");
   function addToCart(name, price) {
     Items.push({ name: name, price: price });
-    props.qtd(true);
+    props.qtd([...props.category, "um"]);
   }
   function removeFromCart(name, price) {
     const obj = { name: name, price: price };
     Items.pop(obj);
+    props.qtd([...props.category.slice(0, -1)]);
     if (count == 1) {
       setState("");
       setCount(1);
-      props.qtd(false);
     }
   }
 
