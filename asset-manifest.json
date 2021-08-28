@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/projeto_08_driveneats_react/static/js/main.546c312e.chunk.js",
-    "main.js.map": "/projeto_08_driveneats_react/static/js/main.546c312e.chunk.js.map",
+    "main.js": "/projeto_08_driveneats_react/static/js/main.36427a36.chunk.js",
+    "main.js.map": "/projeto_08_driveneats_react/static/js/main.36427a36.chunk.js.map",
     "runtime-main.js": "/projeto_08_driveneats_react/static/js/runtime-main.f94e780e.js",
     "runtime-main.js.map": "/projeto_08_driveneats_react/static/js/runtime-main.f94e780e.js.map",
-    "static/js/2.80cf4aca.chunk.js": "/projeto_08_driveneats_react/static/js/2.80cf4aca.chunk.js",
-    "static/js/2.80cf4aca.chunk.js.map": "/projeto_08_driveneats_react/static/js/2.80cf4aca.chunk.js.map",
+    "static/js/2.545f6906.chunk.js": "/projeto_08_driveneats_react/static/js/2.545f6906.chunk.js",
+    "static/js/2.545f6906.chunk.js.map": "/projeto_08_driveneats_react/static/js/2.545f6906.chunk.js.map",
     "index.html": "/projeto_08_driveneats_react/index.html",
-    "static/js/2.80cf4aca.chunk.js.LICENSE.txt": "/projeto_08_driveneats_react/static/js/2.80cf4aca.chunk.js.LICENSE.txt"
+    "static/js/2.545f6906.chunk.js.LICENSE.txt": "/projeto_08_driveneats_react/static/js/2.545f6906.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f94e780e.js",
-    "static/js/2.80cf4aca.chunk.js",
-    "static/js/main.546c312e.chunk.js"
+    "static/js/2.545f6906.chunk.js",
+    "static/js/main.36427a36.chunk.js"
   ]
 }
