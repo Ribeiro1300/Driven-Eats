@@ -115,7 +115,6 @@ a {
   margin-right: 10px;
   font-size: 20px;
   color: #333333;
-  --ionicon-stroke-width: 16px;
 }
 .preco .counter {
   display: none;
@@ -142,7 +141,7 @@ a {
   font-size: 20px;
   color: #ffffff;
   border-radius: 30px;
-  width: 294px;
+  width: 354px;
   height: 61px;
   background-color: #cbcbcb;
   display: flex;

@@ -4,19 +4,29 @@ import { Deserts, Drinks, MainDishes, Items } from "./Data";
 function SingleDish(info, props) {
   const [count, setCount] = React.useState(1);
   const [state, setState] = React.useState("");
-  if (count == 0) setState(" ");
   function addToCart(name, price) {
     Items.push({ name: name, price: price });
+    props.qtd([...props.category, "um"]);
   }
   function removeFromCart(name, price) {
     const obj = { name: name, price: price };
     Items.pop(obj);
+    props.qtd([...props.category.slice(0, -1)]);
+    if (count == 1) {
+      setState("");
+      setCount(1);
+    }
   }
 
   return (
     <div
       className={props.dish + " opcao " + state}
-      onClick={() => setState("selecionado")}
+      onClick={() => {
+        if (state == "") {
+          setState("selecionado");
+          addToCart(info.name, info.price);
+        }
+      }}
     >
       <img src={info.img} alt="" />
       <h3>{info.name}</h3>
