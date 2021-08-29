@@ -9,8 +9,9 @@ export default function Checkout() {
 
   function finish() {
     const wppMsg = wppTxt();
+    const msg = encodeURIComponent(wppMsg[0]);
     window.open(
-      "https://api.whatsapp.com/send/?phone=5521971346486&text=" + wppMsg[0],
+      "https://api.whatsapp.com/send/?phone=5521971346486&text=" + msg,
       "_blank"
     );
   }
