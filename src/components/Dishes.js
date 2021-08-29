@@ -6,14 +6,30 @@ function SingleDish(info, props) {
   const [state, setState] = React.useState("");
 
   function addToCart(dish, name, price) {
-    Items.push({ type: dish, name: name, price: price });
+    Items.push({ type: dish, name: name, price: price, qtd: 1 });
     props.qtd([...props.category, "um"]);
+  }
+  function plusOne(name) {
+    setCount(count + 1);
+    props.qtd([...props.category, "um"]);
+
+    Items.map((info) => {
+      if (name == info.name) {
+        info.qtd += 1;
+      }
+    });
   }
   function removeFromCart(dish, name, price) {
     const obj = { type: dish, name: name, price: price };
-    Items.pop(obj);
+    setCount(count - 1);
+    Items.map((info) => {
+      if (name == info.name) {
+        info.qtd -= 1;
+      }
+    });
     props.qtd([...props.category.slice(0, -1)]);
     if (count == 1) {
+      Items.pop(obj);
       setState("");
       setCount(1);
     }
@@ -41,7 +57,6 @@ function SingleDish(info, props) {
           <ion-icon
             name="remove-outline"
             onClick={() => {
-              setCount(count - 1);
               removeFromCart(props.dish, info.name, info.price);
             }}
           ></ion-icon>
@@ -49,8 +64,7 @@ function SingleDish(info, props) {
           <ion-icon
             name="add-outline"
             onClick={() => {
-              setCount(count + 1);
-              addToCart(props.dish, info.name, info.price);
+              plusOne(info.name);
             }}
           ></ion-icon>
         </div>

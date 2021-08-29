@@ -69,4 +69,29 @@ const Deserts = [
 ];
 const Items = [];
 
-export { Deserts, Drinks, MainDishes, Items };
+const wppTxt = () => {
+  let msg = `Olá, gostaria de fazer o pedido:
+  `;
+  let total = 0;
+  Items.map((info) => {
+    if (info.type == "MainDishes") {
+      msg += `- Prato: ${info.name} (${info.qtd}x)
+  `;
+      total += info.price * info.qtd;
+    }
+    if (info.type == "Drinks") {
+      msg += `- Bebida: ${info.name} (${info.qtd}x)
+  `;
+      total += info.price * info.qtd;
+    }
+    if (info.type == "Deserts") {
+      msg += `- Sobremesa: ${info.name} (${info.qtd}x)
+  `;
+      total += info.price * info.qtd;
+    }
+  });
+  msg += `Total: R$ ${total.toFixed(2)}`;
+  let wppMsg = [msg, total.toFixed(2)];
+  return wppMsg;
+};
+export { Deserts, Drinks, MainDishes, Items, wppTxt };

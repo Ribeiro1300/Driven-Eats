@@ -159,17 +159,17 @@ a {
 }
 .checkoutContainer {
   background-color: azure;
-  width: 300px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 10px;
 }
 .order {
-  font-size: 20px;
+  font-size: 17px;
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  margin: 15px;
 }
 .checkout h2 {
   color: #333333;
@@ -186,15 +186,16 @@ a {
 }
 .botao2 {
   font-size: 20px;
-  color: #32b72f;
+  color: white;
   border-radius: 30px;
   width: 244px;
-  height: 51px;
-  background-color: white;
+  height: 41px;
+  background-color: #32b72f;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 20px 0px;
 }
 
 .hidden {
