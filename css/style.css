@@ -152,18 +152,31 @@ a {
 
 .checkout {
   margin-top: 92px;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.checkoutContainer {
+  background-color: azure;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+}
+.order {
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
 }
 .checkout h2 {
   color: #333333;
   font-family: "Righteous", cursive;
   font-weight: 400;
   font-size: 26px;
-  margin-bottom: 10px;
+  margin: 20px;
 }
 .final {
   display: flex;
@@ -173,17 +186,21 @@ a {
 }
 .botao2 {
   font-size: 20px;
-  color: #32b72f;
+  color: white;
   border-radius: 30px;
   width: 244px;
-  height: 51px;
-  background-color: white;
+  height: 41px;
+  background-color: #32b72f;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 20px 0px;
 }
 
 .hidden {
   display: none;
+}
+.bold {
+  font-weight: 700;
 }
