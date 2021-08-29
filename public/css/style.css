@@ -152,18 +152,31 @@ a {
 
 .checkout {
   margin-top: 92px;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.checkoutContainer {
+  background-color: azure;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+}
+.order {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
 }
 .checkout h2 {
   color: #333333;
   font-family: "Righteous", cursive;
   font-weight: 400;
   font-size: 26px;
-  margin-bottom: 10px;
+  margin: 20px;
 }
 .final {
   display: flex;
@@ -186,4 +199,7 @@ a {
 
 .hidden {
   display: none;
+}
+.bold {
+  font-weight: 700;
 }

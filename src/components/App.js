@@ -1,4 +1,5 @@
 import { Dishes } from "./Dishes";
+import Checkout from "./Checkout";
 import React from "react";
 export default function App() {
   const [mainCounter, setMainCounter] = React.useState([]);
@@ -14,6 +15,11 @@ export default function App() {
   ) {
     btn2 = "Fechar pedido";
     customStyle.backgroundColor = "green";
+  }
+
+  function teste() {
+    document.querySelector(".principal").classList.add("hidden");
+    document.querySelector(".checkout").classList.remove("hidden");
   }
   return (
     <>
@@ -34,10 +40,10 @@ export default function App() {
           qtd={setDesertsCounter}
           category={desertsCounter}
         />
-        {console.log(mainCounter, drinksCounter, desertsCounter)}
       </div>
+      <Checkout />
       <div className="finalizar">
-        <div className="botao" style={customStyle}>
+        <div className="botao" style={customStyle} onClick={teste}>
           {btn2}
         </div>
       </div>

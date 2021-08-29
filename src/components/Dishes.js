@@ -4,12 +4,13 @@ import { Deserts, Drinks, MainDishes, Items } from "./Data";
 function SingleDish(info, props) {
   const [count, setCount] = React.useState(1);
   const [state, setState] = React.useState("");
-  function addToCart(name, price) {
-    Items.push({ name: name, price: price });
+
+  function addToCart(dish, name, price) {
+    Items.push({ type: dish, name: name, price: price });
     props.qtd([...props.category, "um"]);
   }
-  function removeFromCart(name, price) {
-    const obj = { name: name, price: price };
+  function removeFromCart(dish, name, price) {
+    const obj = { type: dish, name: name, price: price };
     Items.pop(obj);
     props.qtd([...props.category.slice(0, -1)]);
     if (count == 1) {
@@ -24,7 +25,7 @@ function SingleDish(info, props) {
       onClick={() => {
         if (state == "") {
           setState("selecionado");
-          addToCart(info.name, info.price);
+          addToCart(props.dish, info.name, info.price);
         }
       }}
     >
@@ -41,7 +42,7 @@ function SingleDish(info, props) {
             name="remove-outline"
             onClick={() => {
               setCount(count - 1);
-              removeFromCart(info.name, info.price);
+              removeFromCart(props.dish, info.name, info.price);
             }}
           ></ion-icon>
           <p>{count}</p>
@@ -49,7 +50,7 @@ function SingleDish(info, props) {
             name="add-outline"
             onClick={() => {
               setCount(count + 1);
-              addToCart(info.name, info.price);
+              addToCart(props.dish, info.name, info.price);
             }}
           ></ion-icon>
         </div>
