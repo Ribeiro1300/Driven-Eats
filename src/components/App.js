@@ -8,6 +8,7 @@ export default function App() {
 
   let customStyle = { backgroundColor: null };
   let btn2 = "Selecione os 3 itens para fechar o pedido";
+  let finishBtn;
   if (
     mainCounter.length != 0 &&
     drinksCounter.length != 0 &&
@@ -15,10 +16,12 @@ export default function App() {
   ) {
     btn2 = "Fechar pedido";
     customStyle.backgroundColor = "green";
+    finishBtn = finish;
   }
 
-  function teste() {
+  function finish() {
     document.querySelector(".principal").classList.add("hidden");
+    document.querySelector(".finalizar").classList.add("hidden");
     document.querySelector(".checkout").classList.remove("hidden");
   }
   return (
@@ -43,7 +46,7 @@ export default function App() {
       </div>
       <Checkout />
       <div className="finalizar">
-        <div className="botao" style={customStyle} onClick={teste}>
+        <div className="botao" style={customStyle} onClick={finishBtn}>
           {btn2}
         </div>
       </div>

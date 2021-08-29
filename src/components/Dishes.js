@@ -19,17 +19,19 @@ function SingleDish(info, props) {
       }
     });
   }
-  function removeFromCart(dish, name, price) {
-    const obj = { type: dish, name: name, price: price };
+  function removeFromCart(dish, name, price, qtd) {
     setCount(count - 1);
+    let obj;
     Items.map((info) => {
       if (name == info.name) {
         info.qtd -= 1;
+        obj = Items.indexOf(info);
       }
     });
+    console.log(obj);
     props.qtd([...props.category.slice(0, -1)]);
     if (count == 1) {
-      Items.pop(obj);
+      Items.splice(obj, 1);
       setState("");
       setCount(1);
     }
@@ -57,7 +59,7 @@ function SingleDish(info, props) {
           <ion-icon
             name="remove-outline"
             onClick={() => {
-              removeFromCart(props.dish, info.name, info.price);
+              removeFromCart(props.dish, info.name, info.price, info.qtd);
             }}
           ></ion-icon>
           <p>{count}</p>

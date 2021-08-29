@@ -7,7 +7,7 @@ export default function Checkout() {
   let priceTotal = 0;
   const total = Items.map((info) => (priceTotal += info.price * info.qtd));
 
-  function finish() {
+  function closeOrder() {
     const wppMsg = wppTxt();
     const msg = encodeURIComponent(wppMsg[0]);
     window.open(
@@ -15,6 +15,12 @@ export default function Checkout() {
       "_blank"
     );
   }
+  function back() {
+    document.querySelector(".principal").classList.remove("hidden");
+    document.querySelector(".finalizar").classList.remove("hidden");
+    document.querySelector(".checkout").classList.add("hidden");
+  }
+  console.log(Items);
   return (
     <div className="checkout hidden">
       <h2>Revise seu pedido</h2>
@@ -48,10 +54,12 @@ export default function Checkout() {
           <p>{priceTotal.toFixed(2)}</p>
         </div>
       </div>
-      <div className="botao2" onClick={finish}>
+      <div className="botao2" onClick={closeOrder}>
         Tudo certo, pode pedir!
       </div>
-      <div className="cancel">Cancelar</div>
+      <div className="cancel" onClick={back}>
+        Cancelar
+      </div>
     </div>
   );
 }
