@@ -1,4 +1,7 @@
+import { Items } from "./Data";
+
 export default function Checkout() {
+  const mainOrder = Items.filter((info)=>info.name);
   return (
     <div className="checkout hidden">
       <h2>Revise seu pedido</h2>
