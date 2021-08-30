@@ -29,7 +29,7 @@ export default function Checkout() {
           <div className="order">
             <p>{info.name}</p>
             <p>
-              {info.price} (x{info.qtd})
+              {info.price.toFixed(2)} (x{info.qtd})
             </p>
           </div>
         ))}
@@ -37,7 +37,7 @@ export default function Checkout() {
           <div className="order">
             <p>{info.name}</p>
             <p>
-              {info.price} (x{info.qtd})
+              {info.price.toFixed(2)} (x{info.qtd})
             </p>
           </div>
         ))}
@@ -45,7 +45,7 @@ export default function Checkout() {
           <div className="order">
             <p>{info.name}</p>
             <p>
-              {info.price} (x{info.qtd})
+              {info.price.toFixed(2)} (x{info.qtd})
             </p>
           </div>
         ))}
