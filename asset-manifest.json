@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/projeto_08_driveneats_react/static/js/main.51eafe2f.chunk.js",
-    "main.js.map": "/projeto_08_driveneats_react/static/js/main.51eafe2f.chunk.js.map",
+    "main.js": "/projeto_08_driveneats_react/static/js/main.9be0b9a5.chunk.js",
+    "main.js.map": "/projeto_08_driveneats_react/static/js/main.9be0b9a5.chunk.js.map",
     "runtime-main.js": "/projeto_08_driveneats_react/static/js/runtime-main.f94e780e.js",
     "runtime-main.js.map": "/projeto_08_driveneats_react/static/js/runtime-main.f94e780e.js.map",
     "static/js/2.e8fe62c4.chunk.js": "/projeto_08_driveneats_react/static/js/2.e8fe62c4.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.f94e780e.js",
     "static/js/2.e8fe62c4.chunk.js",
-    "static/js/main.51eafe2f.chunk.js"
+    "static/js/main.9be0b9a5.chunk.js"
   ]
 }
