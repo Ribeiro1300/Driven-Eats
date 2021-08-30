@@ -114,7 +114,12 @@ a {
 .preco ion-icon {
   margin-right: 10px;
   font-size: 20px;
-  color: #333333;
+}
+#add {
+  color: #32b72f;
+}
+#remove {
+  color: #cf2b2b;
 }
 .preco .counter {
   display: none;

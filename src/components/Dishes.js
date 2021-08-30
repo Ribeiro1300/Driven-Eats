@@ -58,6 +58,7 @@ function SingleDish(info, props) {
         <div className={"counter " + state}>
           <ion-icon
             name="remove-outline"
+            id="remove"
             onClick={() => {
               removeFromCart(props.dish, info.name, info.price, info.qtd);
             }}
@@ -65,6 +66,7 @@ function SingleDish(info, props) {
           <p>{count}</p>
           <ion-icon
             name="add-outline"
+            id="add"
             onClick={() => {
               plusOne(info.name);
             }}
